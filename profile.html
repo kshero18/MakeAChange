@@ -1,0 +1,87 @@
+<?php	session_start();	?>
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+  <title>Make A Change</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="images/download.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div id="header">
+		<div>
+			<a href="profile.html" id="logo"><img src="images/download1.png" alt="logo"></a>
+		</div>
+	</div>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Help Through Volunteering</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="indexmain.php">Home</a></li>
+				<li><a href="./about.php">About</a></li>
+				<li><a href="./donate.php">Donate</a></li>
+				<li><a href="adminpanel.php">Admin Panel</a></li>
+				<?php 
+					if(isset($_SESSION["user_id"])){
+
+				?>
+					<li class="active"><a>Profile</a></li>
+					<li class="log_btn"><a href="logout.php">Logout</a></li>
+				<?php 
+					}
+				?>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<center><div id="body">
+		<div id="gallery">
+			<div class="header">
+				<div>
+					<h2></h2>
+					<p>
+					</p>
+				</div>
+				<img src="images/399aa81c4e799a98634876c2338da129--artistic-photography-nixon.jpg" height="800px" width="1500px">
+			</div>
+			<div class="body">
+				<div>
+					<h2></h2>
+				</div>
+				<div>
+					<h2></h2>
+					<p>
+					</p>
+				</div>
+				<div>
+					<h2></h2>
+					<p>
+					</p>
+				</div>
+			</div>
+			<div class="footer">
+				<p>
+					On one hand, there are people who live their life lavishly. They are not only enjoying the joy of essentials but also have what they want and desire; a luxurious living providing them an extra comfort. On the other hand, there are people who cannot even afford the basic requirements of living. They do not have shelter to live, food to eat, and clothes to wear.People who have extra are living a comfortable and a posh life. While those who have barely the vitals are fighting each day for life.They fail to meet the basic requirements.Helping these kind of people and making a change.
+				</p>
+				<a href="login.php">Get Involved</a>
+			</div>
+		</div>
+	</div>
+	<?php include("./includes/footer.html");	?></center>
+</body>
+</html>
